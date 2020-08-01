@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'home#top'
-  get 'posts/create' => 'posts#create'
-  get 'posts/index' => 'posts#index'
-  get 'posts/:id' => 'posts#detail'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  post 'posts/new' => 'posts#new'
+   get "posts/index" => "posts#index"
+  get "posts/new" => "posts#new"
+  get "posts/:id" => "posts#detail"
+  post "posts/create" => "posts#create"
+  get "posts/:id/edit" => "posts#edit"
 end

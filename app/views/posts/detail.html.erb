@@ -6,6 +6,9 @@
       <div class="posted-time">
         <%= @post.created_at %>
       </div>
+      <div class="post-menus">
+        <%= link_to("編集する", "/posts/#{@post.id}/edit") %>
+      </div>
       </p>
     </div>
   </div>

@@ -1,22 +1,26 @@
 class PostsController < ApplicationController
   
-  def index
+  def index #投稿一覧
     @posts=
-    Post.all
+    Post.all.order(created_at: :desc)
   end
   
-  def detail
+  def detail #レビュー詳細ページ
    @post = Post.find_by(id: params[:id])
   end
   
-  def create
+  def new　#新規レビュー
     
   end
   
-  def new
-    @post = Post.new(content:params[:content])
+  def create　　　#レビュー投稿
+    @post = Post.new(content: params[:content])
     @post.save
     redirect_to("/posts/index")
+  end
+  
+  def edit　　　#レビュー編集
+    @post = Post.find_by(id: params[:id])
   end
   
 end
