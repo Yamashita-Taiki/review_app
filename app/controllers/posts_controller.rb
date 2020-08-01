@@ -13,4 +13,10 @@ class PostsController < ApplicationController
     
   end
   
+  def new
+    @post = Post.new(content:params[:content])
+    @post.save
+    redirect_to("/posts/index")
+  end
+  
 end
