@@ -1,2 +1,15 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
+<header>
+  
+<div class="main posts-index">
+  <div class="container">
+    <% @posts.each do |post| %>
+    <div class="posts-index-item">
+        <%= post %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
