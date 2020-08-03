@@ -13,20 +13,23 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(content: params[:content])
-    @post.save
+    
     redirect_to("/posts/index")
   end
   
   def edit
-    # 変数@postを定義してください
     @post = Post.find_by(id: params[:id])
   end
   
   def update
      @post= Post.find_by(id:params[:id])
     @post.content = params[:content]
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      redirect_to("/posts/index")
+    else
+      flash.now[:danger] = '字数オーバー'
+      render("posts/edit")
+    end
   end
   
  def destroy
