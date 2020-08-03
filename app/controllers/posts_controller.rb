@@ -21,4 +21,16 @@ class PostsController < ApplicationController
     # 変数@postを定義してください
     @post = Post.find_by(id: params[:id])
   end
+  
+  def update
+     @post= Post.find_by(id:params[:id])
+    @post.content = params[:content]
+    @post.save
+    redirect_to("/posts/index")
+  end
+  
+ def destroy
+    redirect_to("/posts/index")
+ end
+  
 end

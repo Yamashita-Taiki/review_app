@@ -17,6 +17,7 @@ module ReviewApp
     # the framework and any gems in your application.
     
     # application.rb
-config.time_zone = 'Tokyo'
+ config.time_zone ='Asia/Tokyo'
+ config.active_record.default_timezone = :local 
   end
 end

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "posts/:id" => "posts#detail"
   post "posts/create" => "posts#create"
   get "posts/:id/edit" => "posts#edit"
+  post 'posts/:id/update' => 'posts#update'
+ post "posts/:id/destroy" => "posts#destroy"
 end
