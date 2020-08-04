@@ -25,9 +25,9 @@ class PostsController < ApplicationController
      @post= Post.find_by(id:params[:id])
     @post.content = params[:content]
     if @post.save
+      flash[:notice] = "投稿を編集しました"
       redirect_to("/posts/index")
     else
-      flash.now[:danger] = '字数オーバー'
       render("posts/edit")
     end
   end
