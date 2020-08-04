@@ -27,15 +27,16 @@
         <li><%= link_to("Home", "/")%></li>
         <li><%= link_to("レビューする", "/posts/new")%></li>
         <li><%= link_to("レビュー一覧", "/posts/index")%>
+        <li><%= link_to("ユーザーの一覧", "/users/index")%>
         <li><%= link_to("ログイン", "/posts/index")%>
       </ul>
     </div>
   </div>
 </nav>
 
-    <% if %>
+     <% if flash[:notice] %>
       <div class="flash">
-        <%=  flash[:notice] %>
+        <%= flash[:notice] %>
       </div>
     <% end %>
     <%= yield %>
