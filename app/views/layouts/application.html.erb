@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+   
   </head>
 
   <body>
@@ -15,11 +15,6 @@
         <%= link_to("review app", "/") %>
       </div>
       <ul class="header-menus">
-        <% if session[:user_id] %>
-          <li>
-            現在ログインしているユーザーのid:
-            <%= session[:user_id] %>
-          </li>
           <li>
             <%= link_to("レビュー一覧", "/posts/index") %>
           </li>
@@ -32,14 +27,12 @@
           <li>
             <%= link_to("ログアウト", "/logout", {method: :post}) %>
           </li>
-        <% else %>
           <li>
             <%= link_to("新規登録", "/signup") %>
           </li>
           <li>
             <%= link_to("ログイン", "/login") %>
           </li>
-        <% end %>
       </ul>
     </header>
 
