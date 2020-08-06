@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users= User.all
+    @users= User.all.order(created_at: :desc)
   end
   
   def detail
@@ -15,8 +15,9 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name], 
       email: params[:email],
-      image_file: '/review_app/public/user_images/S__40493076.jpg'
+      image_file: params[:image_file]
       )
+      
     if @user.save
     flash[:notice] = "新しいユーザーが登録されました"
     redirect_to("/users/#{@user.id}")
@@ -44,6 +45,29 @@ class UsersController < ApplicationController
     else
       render('users/edit')
     end
+  end
+  
+  def login_page
+  end
+  
+  def login
+    @user = User.find_by(email: params[:email], password: params[:password])
+    if @user
+      flash[:notice] = "ログインしました"
+      session[:user_id] = @user.id
+      redirect_to("/users/index")
+    else
+       @error_message = "メールアドレスまたはパスワードが間違っています"
+      @email= params[:email]
+      @password = params[:password]
+      render("users/login_page")
+    end
+  end
+  
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウトしました"
+    redirect_to("/login")
   end
   
 end
