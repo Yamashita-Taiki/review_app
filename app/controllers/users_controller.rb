@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+   before_action :authenticate_user, {only:[:index,:detail,:edit,:update]}
+   before_action :forbid_logined_user, {only:[:new, :create, :login_page, :login]}
+   before_action :ensure_correct_user, {only: [:edit, :update]}
+   
   def index
     @users= User.all.order(created_at: :desc)
   end
@@ -71,4 +75,10 @@ class UsersController < ApplicationController
     redirect_to("/login")
   end
   
+  def ensure_correct_user
+    if @logined_user.id != params[:id].to_i
+      flash[:notice] ="他のユーザー情報は変更できません"
+      redirect_to("/posts/index")
+    end
+  end
 end

@@ -15,6 +15,11 @@
         <%= link_to("review app", "/") %>
       </div>
       <ul class="header-menus">
+        
+        <% if @logined_user %>
+          <li>
+            <%= link_to(@logined_user.name, "/users/#{@logined_user.id}") %>
+          </li>
           <li>
             <%= link_to("レビュー一覧", "/posts/index") %>
           </li>
