@@ -10,10 +10,16 @@
       <div class="posted-time">
         <%= @post.created_at %>
       </div>
+
        <% if Bookmark.find_by(user_id: @logined_user.id, post_id: @post.id) %>
-        保存済み
+
+        <%= link_to("/bookmarks/#{@post.id}/destroy", {method: "post"}) do %>
+          <span class="fas fa-bookmark"></span>
+        <% end %>
       <% else %>
-       <%= link_to("ブックマークする", "/bookmarks/#{@post.id}/create", {method: "post"}) %>
+        <%= link_to("/bookmarks/#{@post.id}/create", {method: "post"}) do %>
+          <span class="far fa-bookmark"></span>
+        <% end %>
       <% end %>
 
       <%if @post.user_id == @logined_user.id %>

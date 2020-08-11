@@ -6,7 +6,13 @@ class BookmarksController < ApplicationController
       post_id: params[:post_id])
     @bookmark.save
     redirect_to("/posts/#{params[:post_id]}")
-  
     end
+
+    def destroy
+        @bookmark = Bookmark.find_by(user_id: @logined_user.id, post_id: params[:post_id])
+        @bookmark.destroy
+        redirect_to("/posts/#{params[:post_id]}")
+      end
+  
     
   end

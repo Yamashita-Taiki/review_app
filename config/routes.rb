@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   post "bookmarks/:post_id/create" => "bookmarks#create"
-    
+  post "bookmarks/:post_id/destroy" => "bookmarks#destroy"
   post "logout" => "users#logout"
   get  "login" => "users#login_page"
   post "login" => "users#login"
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'users/index' => "users#index"
   get 'users/:id' => "users#detail"
   get 'users/:id/edit' => 'users#edit'
+  get "users/:id/bookmarks" => "users#bookmarks"
   
   root 'home#top'
   
