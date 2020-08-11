@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
+  post "bookmarks/:post_id/create" => "bookmarks#create"
     
   post "logout" => "users#logout"
   get  "login" => "users#login_page"
   post "login" => "users#login"
+
   post "users/:id/update" => "users#update"
   post "users/create" => "users#create"
   get "signup" => "users#new"
