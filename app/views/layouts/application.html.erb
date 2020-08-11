@@ -15,16 +15,15 @@
         <%= link_to("review app", "/") %>
       </div>
       <ul class="header-menus">
-        
         <% if @logined_user %>
           <li>
-            <%= link_to(@logined_user.name, "/users/#{@logined_user.id}") %>
+            <%= link_to(@logined_user.name, "/users/#{@logined_user.id}") %>でログイン中です
           </li>
           <li>
-            <%= link_to("レビュー一覧", "/posts/index") %>
+            <%= link_to("投稿一覧", "/posts/index") %>
           </li>
           <li>
-            <%= link_to("レビューを投稿する", "/posts/new") %>
+            <%= link_to("新規投稿", "/posts/new") %>
           </li>
           <li>
             <%= link_to("ユーザー一覧", "/users/index") %>
@@ -32,12 +31,15 @@
           <li>
             <%= link_to("ログアウト", "/logout", {method: :post}) %>
           </li>
+        <% else %>
           <li>
+            
             <%= link_to("新規登録", "/signup") %>
           </li>
           <li>
             <%= link_to("ログイン", "/login") %>
           </li>
+        <% end %>
       </ul>
     </header>
 

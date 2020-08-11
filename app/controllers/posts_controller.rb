@@ -14,7 +14,10 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(content: params[:content])
+    @post = Post.new(
+      content: params[:content]
+      user_id: @logined_user.id
+    )
     if @post.save
       flash[:notice] = "新しいレビューを投稿しました"
     redirect_to("/posts/index")
