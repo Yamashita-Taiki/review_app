@@ -11,7 +11,7 @@
 
     <ul class="user-tabs">
       <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
-      <li><%= link_to("保存", "/users/#{@user.id}/bookmarks") %></li>
+      <li><%= link_to("保存したレビュー", "/users/#{@user.id}/bookmarks") %></li>
     </ul>
 
     <% @user.my_posts.each do |post| %>
