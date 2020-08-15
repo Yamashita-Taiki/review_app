@@ -4,6 +4,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* reset ================================ */
+// 変数
+$link-color-text:#FFFFFF;
+$link-color-top-color:#333333;
+$link-color-bg:#3F51B5;
+$link-color-shadow:#00000029;
+$link-color-header:#E81919;
+$link-color-cardbg:#EFEFEF;
+$link-color-card-text:#6F7579;
+$link-color-rabel1:#666666;
+$link-color-rabel2:#3F51B5;
+$link-color-rabel3:#E81919;
+$link-color-my-color:white;
+
+// レスポンシブ
+$breakpoints: (
+    'sm' : 'screen and (max-width: 575px)',
+    'md' : 'screen and (max-width: 768px)',
+    'lg' : 'screen and (max-width: 992px)',
+    'xl' : 'screen and (max-width: 1199px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+  }
+
 * {
   box-sizing: border-box;
 }
@@ -43,7 +69,6 @@ form input[type="submit"] {
 /* 共通レイアウト ================================ */
 body {
   color: #2d3133;
-  background-color: #3ecdc6;
   margin: 0;
   min-height: 1vh;
 }
@@ -57,65 +82,170 @@ body {
   background-color: #f5f8fa;
 }
 
-.container {
-  max-width: 600px;
-  margin: 60px auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  clear: both;
+a:hover{
+  opacity: 0.7;
 }
+a{
+  text-decoration: none;
+}
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    height: inherit;   
+}
+.section-title{
+  text-align: center;
+    padding-top: 68px;
+    margin-bottom: 68px;
+    font-size: 2.8rem;
+    border-bottom: 5px solid $link-color-bg;
+  padding-bottom: 44px;
+  display: inline-block;
+}
+.clear::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
 
 /* ヘッダー ================================ */
-header {
-  height: 64px;
-  position: absolute;
-  z-index: 1;
+
+header{
   width: 100%;
+  max-height: 100px;
+  background-color: $link-color-bg;
+  padding: 20px 0;
 }
+.header{
 
-.header-logo {
-  float: left;
-  padding-left: 20px;
-  color: white;
-  font-size: 22px;
-  line-height: 64px;
+  &-top{
+    @include mq(md){
+      text-align: center;
+    }
+  }
+  &-left{
+    width: 48%;
+    height: auto;
+    float: left;
+    @include mq(md){
+      float: none;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+&-img{
+  padding-top: 5px;
+  width: 48%;
+  vertical-align: bottom;
+  @include mq(md){
+    width: 80%;
+   
+  }
 }
-
-.header-logo a{
-  color: white;
-  font-size: 22px;
-}
-
-.header-menus {
+&-right{
+  width: 48%;
   float: right;
-  padding-right: 20px;
+  @include mq(md){
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
-
-.header-menus li {
+&-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include mq(md){
+    padding: 0;
+  }
+}
+&-nav-item{
   float: left;
-  line-height: 64px;
-  font-size: 13px;
-  color: white;
-  padding-left: 15px;
+  & a{
+    color: $link-color-text;
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+}
 }
 
-.header-menus a {
-  float: left;
-  font-size: 13px;
-  color: white;
-}
+                               ////// //**concept**///////////////
 
-.header-menus .fa {
-  padding-right: 5px;
+.ravel{
+  box-sizing: border-box;
+  background-color:#666666 ;
+  width: 95px;
+  height: 25px;
+  border-radius: 6px;
+  color: $link-color-text;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-right: 30px;
+  margin-left: 30px;
+  @include mq(md){
+     width: 47px;
+     height: 12px;
+     font-size: 8px;
+     margin-right:15px ;
+     margin: 15px;
+  }
 }
+.ravel2{
+  background-color: #3F51B5;
+}
+.ravel3{
+background-color: #E81919;
 
-.header-menus input[type="submit"] {
-  padding: 0 20px;
-  float: left;
-  line-height: 64px;
-  color: white;
-  margin: 0;
-  font-size: 13px;
+}
+.news{
+padding-bottom: 66px;
+  .container{
+    margin-top: 80px ;
+    text-align: center;
+    @include mq(md){
+      line-height: 15px;
+      text-align: center;
+    }
+    
+    .news-wrapper{
+      display: inline-block;
+      border-bottom:1px solid #707070;
+      padding-bottom: 21.5px;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    
+    dl{
+      display: table;
+      margin: 0 auto;
+      margin-top: 30px;
+      dt{
+        display: table-cell;
+      }
+      dd{
+        display: table-cell;
+      }
+      .news-text{
+        display: flex;
+        flex-wrap: wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        width: 100%;
+        max-width: 500px;
+        line-height: 1.5;
+        color: $link-color-top-color;
+        @include mq(md){
+          width: 100%;
+        }
+        
+
+      }
+    }
+  }
 }
 
 /* top ================================ */
@@ -128,7 +258,7 @@ header {
   height: auto;
   min-height: 100%;
   color: white;
-  background-color: #3ecdc6;
+  background-color: $link-color-shadow;
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;

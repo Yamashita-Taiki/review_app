@@ -11,37 +11,45 @@
   </head>
 
   <body>
-<header>
-      <div class="header-logo">
+
+ <header class="header-top">
+    <div class="container clear">
+      <div class="header-left">
         <%= link_to("review app", "/") %>
       </div>
-      <ul class="header-menus">
-        <% if @logined_user %>
-          <li>
+      <div class="header-right">
+        <nav id="navigation">
+          <ul class="header-nav">
+            <% if @logined_user %>
+          <li class="header-nav-item">
             <%= link_to(@logined_user.name, "/users/#{@logined_user.id}") %>でログイン中です
           </li>
-          <li>
+          <li class="header-nav-item"> 
             <%= link_to("投稿一覧", "/posts/index") %>
           </li>
-          <li>
+          <li class="header-nav-item">
             <%= link_to("新規投稿", "/posts/new") %>
           </li>
-          <li>
+          <li class="header-nav-item">
             <%= link_to("ユーザー一覧", "/users/index") %>
           </li>
-          <li>
+          <li class="header-nav-item">
             <%= link_to("ログアウト", "/logout", {method: :post}) %>
           </li>
         <% else %>
-          <li>
+          <li class="header-nav-item">
             
             <%= link_to("新規登録", "/signup") %>
           </li>
-          <li>
+          <li class="header-nav-item">
             <%= link_to("ログイン", "/login") %>
           </li>
         <% end %>
-      </ul>
+          </ul>
+        </nav>
+        </div>
+      </div>
+    
     </header>
 
      <% if flash[:notice] %>
