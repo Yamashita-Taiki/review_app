@@ -20,6 +20,7 @@
       <div class="header-right">
         <nav id="navigation">
           <ul class="header-nav">
+          
             <% if @logined_user %>
           <li class="header-nav-item">
             <%= link_to(@logined_user.name, "/users/#{@logined_user.id}") %>でログイン中です
