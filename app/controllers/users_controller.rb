@@ -16,12 +16,22 @@ class UsersController < ApplicationController
   end
   
   def create
-    @post = Post.new(post_params)
-    if @post.save
-      flash[:notice] = "新しいレビューを投稿しました"
-      redirect_to("/posts/index")
+    @user = User.new(
+      name: params[:name],
+      email: params[:email],
+      password: params[:password]
+    )
+    if params[:image]
+      @user.image_file = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_file}", image.read)
+    end
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:notice] = "ユーザー登録が完了しました"
+      redirect_to("/users/#{@user.id}")
     else
-      render("posts/new")
+      render("users/new")
     end
   end
   
@@ -81,9 +91,4 @@ class UsersController < ApplicationController
     end
   end
   
-  def post_params
-    params.require(:post).permit(:content, :picture)
-  end
-
-
 end
