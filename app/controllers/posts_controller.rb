@@ -17,10 +17,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(
-    content: params[:content],
-    user_id: @logined_user.id
-    )
+    @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "新しいレビューを投稿しました"
       redirect_to("/posts/index")
@@ -56,8 +53,8 @@ class PostsController < ApplicationController
   end
 end
 
-# def post_params
-#   params.require(:post).permit(:content, :picture)
-# end
+def post_params
+  params.require(:post).permit(:content,:picture)
+end
   
 end

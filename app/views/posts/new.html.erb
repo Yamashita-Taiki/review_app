@@ -2,20 +2,18 @@
   <div class="container">
     <h1 class="form-heading">投稿する</h1>
 ​
-    <%= form_with model: @post, url: "/posts/create", local: true do |f| %>
+     <%= form_tag("/posts/create") do %>
       <div class="form">
         <div class="form-body">
           <% @post.errors.full_messages.each do |message| %>
-              <div class="form-error">
-                <%= message %>
-              </div>
+            <div class="form-error">
+              <%= message %>
+            </div>
           <% end %>
-          <%= f.text_area :content %>
-          <div class="field">
-            <%= f.label :picture %>
-            <%= f.file_field :picture %>
-          </div>
-          <%= f.submit "投稿" %>
+          
+          <textarea name="content"><%= @post.content %></textarea>
+          <input type="file" name="picture">
+          <input type="submit" value="投稿">
         </div>
       </div>
     <% end %>

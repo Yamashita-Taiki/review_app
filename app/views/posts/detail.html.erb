@@ -6,6 +6,7 @@
         <%= link_to(@user.name, "/users/#{@user.id}") %>
       </div>
       <p>
+       <%= image_tag(@post.picture_url) if @post.picture.present? %>
           <%= @post.content %>
       <div class="posted-time">
         <%= @post.created_at %>
