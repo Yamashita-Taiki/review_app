@@ -22,13 +22,6 @@
           <ul class="header-nav">
           
             <% if @logined_user %>
-          <%
-=begin%>
- <li class="header-nav-item">
-            <%= link_to(@logined_user.name, "/users/#{@logined_user.id}") %>でログイン中です
-          </li> 
-<%
-=end%>
           <li class="header-nav-item"> 
             <%= link_to("投稿一覧", "/posts/index") %>
           </li>
