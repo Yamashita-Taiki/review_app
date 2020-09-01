@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="form-heading">投稿する</h1>
 ​
-     <%= form_tag("/posts/create") do %>
+     <%= form_tag("/posts/create",{multipart: true}) do %>
       <div class="form">
         <div class="form-body">
           <% @post.errors.full_messages.each do |message| %>
@@ -10,9 +10,8 @@
               <%= message %>
             </div>
           <% end %>
-          
           <textarea name="content"><%= @post.content %></textarea>
-          <input type="file" name="picture">
+          <input name="image" type="file">
           <input type="submit" value="投稿">
         </div>
       </div>
