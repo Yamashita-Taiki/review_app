@@ -15,7 +15,7 @@
  <header class="header-top">
     <div class="container clear">
       <div class="header-left">
-        <%= link_to("review app", "/") %>
+        <%= link_to("このサービスについて", "/about") %>
       </div>
       <div class="header-right">
         <nav id="navigation">
@@ -23,7 +23,7 @@
           
             <% if @logined_user %>
           <li class="header-nav-item"> 
-            <%= link_to("投稿一覧", "/posts/index") %>
+            <%= link_to("投稿一覧", "/") %>
           </li>
           <li class="header-nav-item">
             <%= link_to("新規投稿", "/posts/new") %>
