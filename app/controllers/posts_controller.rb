@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     end
     if @post.save
       flash[:notice] = "新しいレビューを投稿しました"
-      redirect_to("/posts/index")
+      redirect_to("/")
     else
       render("posts/new")
     end
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "投稿を編集しました"
-      redirect_to("/posts/index")
+      redirect_to("/")
     else
       render("posts/edit")
     end
@@ -53,14 +53,14 @@ class PostsController < ApplicationController
   @post = Post.find_by(id: params[:id])
   @post.destroy
   flash[:notice] = "投稿を削除しました"
-  redirect_to("/posts/index")
+  redirect_to("/")
  end
 
  def ensure_logined_user
   @post = Post.find_by(id: params[:id])
   if @post.user_id != @logined_user.id
     flash[:notice] = "権限がありません"
-    redirect_to("/posts/index")
+    redirect_to("/")
   end
 end
   

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :posts
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   before_save { self.email = email.downcase }
@@ -10,6 +11,5 @@ class User < ApplicationRecord
   def my_posts
     return Post.where(user_id: self.id)
   end
-
                       
 end
