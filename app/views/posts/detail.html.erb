@@ -2,13 +2,14 @@
   <div class="container">
     <div class="posts-show-item">
     <div class="post-user-name">
-        <img src="<%= "/post_images/#{@post.image_file}" %>">
+        <img src="<%= "/post_images/#{@post.picture}" %>">
         <%= link_to(@user.name, "/users/#{@user.id}") %>
       </div>
       <p>
           <%= @post.content %>
       <div class="posted-time">
         <%= @post.created_at %>
+        <%= image_tag(@post.picture_url) if @post.picture.present? %>
       </div>
 
        <% if Bookmark.find_by(user_id: @logined_user.id, post_id: @post.id) %>

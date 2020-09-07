@@ -20,12 +20,8 @@ class PostsController < ApplicationController
     @post = Post.new(
       content: params[:content],
       user_id: @logined_user.id,
+      picture: params[:picture]
     )
-    if params[:image]
-      @post.image_file = "#{@post.id}.jpg"
-      image = params[:image_file]
-      File.binwrite("public/post_images/#{@post.image_file}", image.read)
-    end
     if @post.save
       flash[:notice] = "新しいレビューを投稿しました"
       redirect_to("/")
