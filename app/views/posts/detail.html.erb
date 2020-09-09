@@ -14,7 +14,7 @@
           </div>
 
       <div class="posted-time">
-        <%= @post.created_at %>
+        <%= simple_time(@post[:created_at]) %>に投稿されました
       </div>
 
        <% if Bookmark.find_by(user_id: @logined_user.id, post_id: @post.id) %>
