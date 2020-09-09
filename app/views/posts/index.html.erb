@@ -9,14 +9,8 @@
           <div class="post-user-name">
          <%= link_to(post.user.name, "/users/#{post.user.id}") %>
          <img src="<%= "/post_images/#{post.picture}" %>">
-         <%
-=begin%>
- ↑画像投稿の表示にしたい 
-<%
-=end%>
           </div>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
-          
+          <%= link_to(post.content, "/posts/#{post.id}") %>         
         </div>
     </div>
     <% end %>
