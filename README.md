@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1「アプリケーションの概要」
+　自分に合った参考書を見つけることができ、自分が使った参考書のレビューを投稿できるサービスです。
 
-Things you may want to cover:
+2「このサービスの機能一覧」
+　・記事投稿機能
+　・記事保存機能
+　・記事編集機能
+　・画像投稿機能
+　・投稿削除機能
+　・サインアップ機能
+　・ユーザ情報編集機能
+　・ログイン、ログアウト機能
+　・認証機能
+　・
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3「使用した技術」
+　・herokuにデプロイ
+　・githubにアップ
