@@ -189,16 +189,33 @@ header{
 }
 
 .top-main h2 {
-  font-size: 70px;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.top-main p {
+  font-size: 24px;
+  color:black;
+}
+
+.top-main h3 {
+  font-size: 60px;
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 20px;
 }
 
-.top-main p {
-  font-size: 24px;
+.message {
+ margin-top:90px;
 }
 
+.message p{
+  font-size: 24px;
+  color:white;
+}
 /* ================================ */
 .form {
   max-width: 600px;
@@ -317,7 +334,7 @@ header{
   overflow: hidden;
 }
 
-.posts-show-item img {
+.posts-show-item .post-user-name img {
   width: 60px;
   height: 60px;
   border-radius: 40%;
@@ -350,6 +367,14 @@ header{
   color: #8899a6;
   text-decoration: underline;
   font-size: 14px;
+}
+
+.post_picture img{
+  width: 30%;
+  height: 30%;
+  vertical-align: middle;
+  object-fit: cover;
+  display:inline;
 }
 
 /* posts/new ================================ */

@@ -9,8 +9,7 @@ class PostsController < ApplicationController
   def detail
     @post = Post.find_by(id: params[:id])
     @user = @post.user
- 
-  end
+ end
   
   def new
     @post = Post.new
