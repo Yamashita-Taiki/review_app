@@ -5,50 +5,43 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+   
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   </head>
 
   <body>
-
- <header class="header-top">
-    <div class="container clear">
-      <div class="header-left">
-        <%= link_to("このサービスについて", "/about") %>
-      </div>
-      <div class="header-right">
-        <nav id="navigation">
-          <ul class="header-nav">
-          
-            <% if @logined_user %>
-          <li class="header-nav-item"> 
-            <%= link_to("投稿一覧", "/") %>
-          </li>
-          <li class="header-nav-item">
-            <%= link_to("新規投稿", "/posts/new") %>
-          </li>
-          <li class="header-nav-item">
-            <%= link_to("ユーザー一覧", "/users/index") %>
-          </li>
-          <li class="header-nav-item">
-            <%= link_to("ログアウト", "/logout", {method: :post}) %>
-          </li>
-        <% else %>
-          <li class="header-nav-item">
-            
-            <%= link_to("新規登録", "/signup") %>
-          </li>
-          <li class="header-nav-item">
-            <%= link_to("ログイン", "/login") %>
-          </li>
-        <% end %>
-          </ul>
-        </nav>
-        </div>
-      </div>
-    
-    </header>
+<ul class="nav justify-content-center">
+  <li class="nav-item nav-link active h4">
+   <%= link_to("このサービスについて", "/about") %>
+  </li>
+  <% if @logined_user %>
+  <li class="nav-item nav-link h4">
+  <%= link_to("投稿一覧", "/") %>
+  </li>
+  <li class="nav-item nav-link h4">
+    <%= link_to("新規投稿", "/posts/new") %>
+  </li>
+  <li class="nav-item nav-link h4">
+     <%= link_to("ユーザー一覧", "/users/index") %>
+  </li>
+  <li class="nav-item nav-link h4">
+     <%= link_to("本の検索", "/rakuten_search") %>
+  </li>
+  <li class="nav-item nav-link h4">
+     <%= link_to("ログアウト", "/logout", {method: :post}) %>
+  </li>
+  <% else %>
+  <li class="nav-item nav-link h4">
+    <%= link_to("新規登録", "/signup") %>
+  </li>
+  <li class="nav-item nav-link h4">
+    <%= link_to("ログイン", "/login") %>
+  </li>
+</ul>
+<% end %>
 
      <% if flash[:notice] %>
       <div class="flash">
@@ -58,3 +51,5 @@
     <%= yield %>
   </body>
 </html>
+
+
