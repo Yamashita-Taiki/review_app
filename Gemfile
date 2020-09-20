@@ -7,7 +7,6 @@ gem 'sass-rails', '5.1.0'
 gem 'webpacker',  '4.0.7'
 gem 'bcrypt'
 gem 'turbolinks', '5.2.0'
-
 gem 'jquery-rails'
 gem 'jbuilder',   '2.9.1'
 gem 'rails-i18n'
@@ -16,6 +15,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'rakuten_web_service'
 gem 'bootstrap-sass'
+gem 'pry-byebug'
+gem 'rb-readline'
 group :development, :test do
   gem 'sqlite3', '1.4.1'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
