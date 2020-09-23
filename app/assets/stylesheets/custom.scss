@@ -177,7 +177,9 @@ header{
   height: auto;
   min-height: 100%;
   color: white;
-  background-color:$link-color-bg;
+  background-image: url("<%= asset_path('stanislav-kondratiev-6pO3QFkk7hQ-unsplash.png') %>");
+  background-image: url("/images/stanislav-kondratiev-6pO3QFkk7hQ-unsplash.png");
+  // background-color:$link-color-bg;
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
@@ -507,3 +509,6 @@ header{
 }
 
 /* search================================ */
+.search{
+  // left:50%;
+}
