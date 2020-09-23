@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'rakuten_search' => 'rakuten#search'
   get "about" => "home#about"
 
   post "bookmarks/:post_id/create" => "bookmarks#create"
