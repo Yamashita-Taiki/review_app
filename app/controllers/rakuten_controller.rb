@@ -5,4 +5,3 @@ class RakutenController < ApplicationController
   end
   end
   end
-  
