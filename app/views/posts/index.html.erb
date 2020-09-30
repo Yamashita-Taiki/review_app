@@ -8,12 +8,20 @@
         <div class="post-right">
           <div class="post-user-name">
          <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-         <img src="<%= "/post_images/#{post.picture}" %>">
+           <%
+=begin%>
+ <%= image_tag post.resized_image if post.picture.attached? %> 
+<%
+=end%>
+          <% if post.picture.present? %>
+         <%= '画像ファイル有'%>
+         <% end %> 
           </div>
           <%= link_to(post.content, "/posts/#{post.id}") %>         
         </div>
     </div>
     <% end %>
+    <%= paginate @posts %>
   </div>
 </div>
 

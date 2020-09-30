@@ -5,11 +5,14 @@
       <div class="users-index-item">
         <div class="user-left">
           <img src="<%= "/user_images/#{user.image_file}" %>">
+         
         </div>
         <div class="user-right">
           <%= link_to(user.name, "/users/#{user.id}") %>
         </div>
       </div>
     <% end %>
+      <%= paginate @users %>
   </div>
 </div>
+ 

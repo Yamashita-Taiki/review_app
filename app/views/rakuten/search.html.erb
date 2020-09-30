@@ -1,4 +1,4 @@
-<div class="main posts-index search">
+<div class="main posts-index">
   <div class="container">
 <%= form_tag :rakuten_search, method: :get do  %>
 <%= label_tag :keyword, 'キーワード検索' %>
@@ -16,14 +16,15 @@
           <div class="post-user-name">
          <%= number_with_delimiter(item.price) %>円
           </div>
-           <%= link_to item.name, "#{item.url}" %>
+           <%= link_to item.name, "#{item.url}",:target=>["_blank"] %>
         </div>
     </div>
     <% end %>
     <% end %>
-    
+    <%= paginate @items %>
 </div>
 </div>
+
 
 
   
