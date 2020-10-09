@@ -9,7 +9,7 @@ class Post < ApplicationRecord
       return User.find_by(id: self.user_id)
     end
     
-    def resized_image
-      image.variant(resize_to_limit: [500, 500])
-    end
+    # def resized_image
+    #   image.variant(resize_to_limit: [500, 500])
+    # end
 end
