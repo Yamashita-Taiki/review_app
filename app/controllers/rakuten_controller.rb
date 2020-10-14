@@ -4,7 +4,7 @@ class RakutenController < ApplicationController
    if params[:keyword]
     @items = RakutenWebService::Ichiba::Item.search(
     keyword: params[:keyword],
-    hits: 10,
+    hits: 30,
     )
   end
   end
