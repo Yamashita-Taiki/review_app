@@ -16,5 +16,7 @@
 　・
 
 3「使用した技術」
+　・HTML/CSS
+  ・ruby on rails
 　・herokuにデプロイ
 　・githubにアップ
