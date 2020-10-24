@@ -177,9 +177,7 @@ header{
   height: auto;
   min-height: 100%;
   color: white;
-  background-image: url("<%= asset_path('stanislav-kondratiev-6pO3QFkk7hQ-unsplash.png') %>");
-  background-image: url("/images/stanislav-kondratiev-6pO3QFkk7hQ-unsplash.png");
-  // background-color:$link-color-bg;
+  background-image: image-url('hTHmHkwjw0LTP7R1603508701_1603508732.png');
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
@@ -190,20 +188,21 @@ header{
 }
 
 .top-main h2 {
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 20px;
-  color:black;
+  color:white;
 }
 
 .top-main p {
-  font-size: 24px;
-  color:black;
+  font-size: 40px;
+  font-weight:bold;
+  color:white;
 }
 
 .top-main h3 {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 20px;
@@ -211,12 +210,12 @@ header{
 
 .message {
  margin-top:90px;
- color:black;
+ color:white;
 }
 
 .message p{
-  font-size: 24px;
-  color:black;
+  font-size: 30px;
+  color:white;
 }
 /* ================================ */
 .form {

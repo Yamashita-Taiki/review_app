@@ -18,3 +18,7 @@
 3「使用した技術」
 　・herokuにデプロイ
 　・githubにアップ
+
+更新情報
+　10/24
+  home/about.thml.erbに背景画像設定
