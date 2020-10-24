@@ -16,9 +16,14 @@
 　・
 
 3「使用した技術」
+　・HTML/CSS
+  ・ruby on rails
 　・herokuにデプロイ
 　・githubにアップ
+<<<<<<< HEAD
 
 更新情報
 　10/24
   home/about.thml.erbに背景画像設定
+=======
+>>>>>>> 365d5b48d9d66c868ba0e394ed543c25b1c6a8fb
