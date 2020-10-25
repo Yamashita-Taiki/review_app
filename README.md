@@ -16,10 +16,26 @@
 　・
 
 3「使用した技術」
-　・HTML/CSS
-  ・ruby on rails
+　・フロント周りにHTML/CSS　bootstrap
+  ・サーバサイドにruby on rails
+  ・ソース管理はGit
 　・herokuにデプロイ
 　・githubにアップ
+また業務で使用されそうなGemには前もって使ってみたかったので、kaminariやcarrierwave、pry-byebug
+などを使用しました。
+またAPIも使用したかったのでRakutenAPIも使用してみました。
+Gitでは、Push,pull, merge, log, status, diff, cloneなどを使用しました。
+
+難しかったこと
+一番苦労したこととしては、postアクションがgetと認識されrouting errorになってしまったことです。
+
+解決法は、プロジェクト内でjQueryが機能していなかったのが問題でした。
+手順としては、
+　- rails webpacker:install
+  - 質問には全部Yで回答（不安だったので検証用ブランチでおこなった）
+- この記事の手順でjqueryを導入
+  - https://qiita.com/masahisa/items/eaacb0c3b82f4a11fc13
+
 <<<<<<< HEAD
 
 更新情報
