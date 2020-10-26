@@ -20,7 +20,8 @@ class PostsController < ApplicationController
     @post = Post.new(
       content: params[:content],
       user_id: @logined_user.id,
-      picture: params[:picture]
+      picture: params[:picture],
+      title: params[:title]
     )
     if @post.save
       flash[:notice] = "新しいレビューを投稿しました"

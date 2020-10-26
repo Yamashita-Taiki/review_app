@@ -5,20 +5,17 @@
         <div class="post-left">
         <img src="<%= "/user_images/#{post.user.image_file}" %>">
         </div>
+
         <div class="post-right">
           <div class="post-user-name">
          <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-        <%
-=begin%>
- <%= image_tag post.resized_image if post.picture.present? %> 
-<%
-=end%>
-<div class='post_index_picture'>
- <% if post.picture.present? %>
+            <div class='post_index_picture'>
+        　<% if post.picture.present? %>
          <%= '画像ファイル有'%>
          <% end %>   
-</div>
+            </div>
          </div>
+         <%= link_to(post.title, "/posts/#{post.id}") %> 
           <%= link_to(post.content, "/posts/#{post.id}") %>         
         </div>
     </div>

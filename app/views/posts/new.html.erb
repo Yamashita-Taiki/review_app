@@ -10,7 +10,11 @@
               <%= message %>
             </div>
           <% end %>
+          <label for='title'>タイトル</label>
+          <input type='string' name='title' placeholder='本のタイトルを入力'>
+          <label for='content'>本の感想</label>
           <textarea name="content"><%= @post.content %></textarea>
+          <label for='picture'>本の写真</label>
           <input name="picture" type="file">        
           <input type="submit" value="投稿">
         </div>
