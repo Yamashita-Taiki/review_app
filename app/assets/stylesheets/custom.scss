@@ -327,7 +327,12 @@ header{
 .posts-show form {
   display: inline;
 }
-
+.post-title{
+  a{
+    font-size:15px;
+    font-weight:bold;
+  }
+}
 .posts-show-item {
   padding: 30px;
   background-color: white;
@@ -335,7 +340,7 @@ header{
   overflow: hidden;
 }
 .post_index_picture{
-  color:blue;
+  color:gray;
 }
 
 .posts-show-item .post-user-name img {

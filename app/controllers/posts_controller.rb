@@ -39,6 +39,7 @@ class PostsController < ApplicationController
      @post= Post.find_by(id:params[:id])
     @post.content = params[:content]
     @post.picture = params[:picture]
+    @post.title = params[:title]
     if @post.save
       flash[:notice] = "投稿を編集しました"
       redirect_to("/")
