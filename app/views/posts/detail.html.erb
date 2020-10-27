@@ -3,22 +3,23 @@
     <div class="posts-show-item">
 
     <div class="post-user-name">
-        <img src="<%= "/user_images/#{@user.image_file}" %>">
-        <%= link_to(@user.name, "/users/#{@user.id}") %>
-      </div>
+      <img src="<%= "/user_images/#{@user.image_file}" %>">
+      <%= link_to(@user.name, "/users/#{@user.id}") %>
+    </div>
+    タイトル：
+      <div class='post-title'>
+        <%= @post.title %> 
+        </div>
       <p>
-          <%= @post.content %>
-
-          <div class="post_picture">
+      　レビュー：<%= @post.content %>
+        <div class="post_picture">
           <%= image_tag(@post.picture_url) if @post.picture.present? %>
-          </div>
-
+        </div>
       <div class="posted-time">
         <%= simple_time(@post[:created_at]) %>に投稿されました
       </div>
 
        <% if Bookmark.find_by(user_id: @logined_user.id, post_id: @post.id) %>
-
         <%= link_to("/bookmarks/#{@post.id}/destroy", {method: "post"}) do %>
           <span class="fas fa-bookmark"></span>
         <% end %>
