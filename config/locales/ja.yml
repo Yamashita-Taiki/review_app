@@ -6,6 +6,8 @@ ja:
       post:
         content: 本文
         email: メールアドレス
+        picture: 本の写真
+        title: 本のタイトル
       user:
         password: パスワード
         email: メールアドレス
