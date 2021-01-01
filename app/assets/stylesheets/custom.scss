@@ -108,32 +108,6 @@ a{
     clear: both;
     content: "";
 }
-/* home/about.html ================================ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-  }
-  
-  .modal-content{
-  background-color: white;
-  width: 500px;
-  margin: 40% auto;
-  }
-  .btn-p{
-    text-align: center;
-  }
-
-h1{
-  color: black;
-}
-
 
 /* ヘッダー ================================ */
 
@@ -194,7 +168,33 @@ header{
   }
 }
 }
-/* top ================================ */
+/* home/about.html ================================ */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content{
+  background-color: white;
+  width: 500px;
+  margin: 40% auto;
+  }
+  .btn-p{
+    text-align: center;
+  }
+
+.modal-txt{
+  color: black;
+}
+
 .top-main {
   padding: 200px 0 100px;
   text-align: center;
@@ -219,13 +219,6 @@ header{
   margin-bottom: 20px;
   color:white;
 }
-
-.top-main p {
-  font-size: 40px;
-  font-weight:bold;
-  color:white;
-}
-
 .top-main h3 {
   font-size: 70px;
   font-weight: 500;
@@ -238,67 +231,62 @@ header{
  color:white;
 }
 
-.message p{
-  font-size: 30px;
-  color:white;
-}
 /* ================================ */
-.form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  box-shadow: 0 2px 6px #c1ced7;
-}
+// .form {
+//   max-width: 600px;
+//   margin: 0 auto;
+//   background-color: white;
+//   box-shadow: 0 2px 6px #c1ced7;
+// }
+// .form-heading {
+//   font-weight: 300;
+//   margin: 60px 0 20px;
+//   font-size: 48px;
+//   color: black;
+//   text-align: center;
+// }
 
-.form-heading {
-  font-weight: 300;
-  margin: 60px 0 20px;
-  font-size: 48px;
-  color: black;
-  text-align: center;
-}
+// .form-body {
+//   padding: 30px;
+// }
 
-.form-body {
-  padding: 30px;
-}
+// .form-error {
+//   color: #ff4d75;
+// }
 
-.form-error {
-  color: #ff4d75;
-}
+// .form input {
+//   width: 100%;
+//   border: 1px solid #d8dadf;
+//   padding: 10px;
+//   color: #57575f;
+//   font-size: 16px;
+//   letter-spacing: 2px;
+//   border-radius: 2px;
+// }
 
-.form input {
-  width: 100%;
-  border: 1px solid #d8dadf;
-  padding: 10px;
-  color: #57575f;
-  font-size: 16px;
-  letter-spacing: 2px;
-  border-radius: 2px;
-}
+// .form textarea {
+//   width: 100%;
+//   min-height: 110px;
+//   font-size: 16px;
+//   letter-spacing: 2px;
+// }
 
-.form textarea {
-  width: 100%;
-  min-height: 110px;
-  font-size: 16px;
-  letter-spacing: 2px;
-}
+// .form input[type="submit"] {
+//   cursor: pointer;
+//   font-weight: 300;
+//   width: 120px;
+//   border-radius: 2px;
+//   margin-top: 8px;
+//   margin-bottom: 0;
+//   background-color:gray;
+//   color:white;
+// }
 
-.form input[type="submit"] {
-  cursor: pointer;
-  font-weight: 300;
-  width: 120px;
-  border-radius: 2px;
-  margin-top: 8px;
-  margin-bottom: 0;
-  background-color:gray;
-  color:white;
-}
-
-.form-body:after {
-  content: '';
-  display: table;
-  clear: both;
-}
+// .form-body:after {
+//   content: '';
+//   display: table;
+//   clear: both;
+// }
 
 /* フラッシュ ================================ */
 .flash {
