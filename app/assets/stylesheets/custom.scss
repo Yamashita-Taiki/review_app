@@ -188,7 +188,11 @@ header{
   margin: 40% auto;
   }
   .btn-p{
+    margin-top: 50px;
     text-align: center;
+    color:white;
+    font-size:30px;
+
   }
 
 .modal-txt{
@@ -201,7 +205,7 @@ header{
   width: 100%;
   height: auto;
   min-height: 100%;
-  color: white;
+  // color: white;
   background-image: image-url('hTHmHkwjw0LTP7R1603508701_1603508732.png');
   background-repeat: no-repeat;
   background-position: center 50%;
@@ -210,6 +214,10 @@ header{
 
 .top-message {
   position: relative;
+  & p{
+    color:white;
+    font-size:30px;
+  }
 }
 
 .top-main h2 {
@@ -226,10 +234,10 @@ header{
   margin-bottom: 20px;
 }
 
-.message {
- margin-top:90px;
- color:white;
-}
+// .message {
+//  margin-top:90px;
+//  color:white;
+// }
 
 /* ================================ */
 // .form {
