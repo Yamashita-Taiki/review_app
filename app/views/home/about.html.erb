@@ -5,7 +5,9 @@
     <p>あなたにあった参考書を見つけましょう！</p>
   </div>
 
-   <div id="modal" class="modal">
+   <%
+=begin%>
+ <div id="modal" class="modal">
     <div class="modal-content">
         <div class="modal-body">
             <p class="modal-txt">
@@ -19,12 +21,28 @@
         </div>
     </div>
 </div>
-  <p class="btn-p"><input type="button" id="btn" value='このアプリを作った背景'></p> 
-  
+  <p class="btn-p"><input type="button" id="btn" value='このアプリを作った背景'></p>  
+<%
+=end%>
+
+   <div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-body">
+            <p class="modal-txt"　align="left">
+            家庭教師の営業の仕事で様々なご家庭に訪問していた際に「教育の平等性」がなくなっていると感じました。<br>
+    それは、家の所得によって「塾などに存分に投資できる家庭」とそれができない家庭というものです。<br>そして、その差はコロナウイルスの影響でさらに広がっていました。<br>
+    「オンライン環境が整っている家庭」とそうでない家庭という具合で。<br>
+    そこで、参考書を使った独学であればそこまで高価でもなく、塾などでは得られないこともあるので独学を支えていきたいと考えました。<br>
+    しかし参考書の数が多すぎるため自分にあった参考書、また他人にオススメできる参考書を投稿できるサービスとして作成しました。
+            </p>
+            <input type="button" id="closeBtn" value="閉じる">
+        </div>
+    </div>
+</div>
   <section class="button">
   <div class="inner">
    <div class="button_item">
-   <p class="button03">ボタンはこちら3</p>
+   <p class="button01 btn-p" id="btn">このアプリを作った理由</p>
    </div>
   </div>
   </section>

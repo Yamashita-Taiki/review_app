@@ -16,11 +16,6 @@ $link-color-rabel1:#666666;
 $link-color-rabel2:#3F51B5;
 $link-color-rabel3:#E81919;
 $link-color-my-color:white;
-$color-main: #3f51b5; 
-$color-active: #e81919; 
-$color-background-base: #fff; 
-$color-text-base: #333; 
-$hover-opacity: 0.6;
 
 // レスポンシブ
 $breakpoints: (
@@ -42,7 +37,7 @@ $breakpoints: (
 html {
   color: #082b48;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.5;
+  line-height: 1,5;
 }
 
 ul, li {
@@ -180,7 +175,7 @@ header{
 .button__item {
 	padding: 1em;
 }
-.button03 {
+.button01 {
 	display: inline-block;
 	min-width: 230px;
 	font-size: 16px;
@@ -188,11 +183,12 @@ header{
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 16px;
-	background: $color-main;
-	color: #fff;
+	background: white;
+	color: #222;
 	border-radius: 3px;
 	&:hover{
-		background: linear-gradient(180deg, #3f51b5 0%, #20295b 100%);
+	background:#222;
+	color: white;
 	}
 
 	&::after {
@@ -226,13 +222,13 @@ header{
   .btn-p{
     margin-top: 50px;
     text-align: center;
-    color:white;
     font-size:30px;
-
   }
 
 .modal-txt{
   color: black;
+  line-height:2;
+  font-size:16px;
 }
 
 .top-main {
@@ -241,7 +237,6 @@ header{
   width: 100%;
   height: auto;
   min-height: 100%;
-  // color: white;
   background-image: image-url('hTHmHkwjw0LTP7R1603508701_1603508732.png');
   background-repeat: no-repeat;
   background-position: center 50%;
