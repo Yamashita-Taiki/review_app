@@ -16,6 +16,11 @@ $link-color-rabel1:#666666;
 $link-color-rabel2:#3F51B5;
 $link-color-rabel3:#E81919;
 $link-color-my-color:white;
+$color-main: #3f51b5; 
+$color-active: #e81919; 
+$color-background-base: #fff; 
+$color-text-base: #333; 
+$hover-opacity: 0.6;
 
 // レスポンシブ
 $breakpoints: (
@@ -169,6 +174,37 @@ header{
 }
 }
 /* home/about.html ================================ */
+.button {
+	padding: 80px 0;
+}
+.button__item {
+	padding: 1em;
+}
+.button03 {
+	display: inline-block;
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	background: $color-main;
+	color: #fff;
+	border-radius: 3px;
+	&:hover{
+		background: linear-gradient(180deg, #3f51b5 0%, #20295b 100%);
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+		background: transparent url(../img/icon-arrow-right.png) no-repeat center center / contain;
+		width: 14px;
+		height: 14px;
+		margin-left: 8px;
+		vertical-align: middle;
+	}
+}
 
 .modal {
   display: none;
@@ -237,63 +273,6 @@ header{
 // .message {
 //  margin-top:90px;
 //  color:white;
-// }
-
-/* ================================ */
-// .form {
-//   max-width: 600px;
-//   margin: 0 auto;
-//   background-color: white;
-//   box-shadow: 0 2px 6px #c1ced7;
-// }
-// .form-heading {
-//   font-weight: 300;
-//   margin: 60px 0 20px;
-//   font-size: 48px;
-//   color: black;
-//   text-align: center;
-// }
-
-// .form-body {
-//   padding: 30px;
-// }
-
-// .form-error {
-//   color: #ff4d75;
-// }
-
-// .form input {
-//   width: 100%;
-//   border: 1px solid #d8dadf;
-//   padding: 10px;
-//   color: #57575f;
-//   font-size: 16px;
-//   letter-spacing: 2px;
-//   border-radius: 2px;
-// }
-
-// .form textarea {
-//   width: 100%;
-//   min-height: 110px;
-//   font-size: 16px;
-//   letter-spacing: 2px;
-// }
-
-// .form input[type="submit"] {
-//   cursor: pointer;
-//   font-weight: 300;
-//   width: 120px;
-//   border-radius: 2px;
-//   margin-top: 8px;
-//   margin-bottom: 0;
-//   background-color:gray;
-//   color:white;
-// }
-
-// .form-body:after {
-//   content: '';
-//   display: table;
-//   clear: both;
 // }
 
 /* フラッシュ ================================ */
