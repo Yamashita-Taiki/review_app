@@ -265,11 +265,6 @@ header{
   margin-bottom: 20px;
 }
 
-// .message {
-//  margin-top:90px;
-//  color:white;
-// }
-
 /* フラッシュ ================================ */
 .flash {
   padding: 10px 0;
@@ -316,6 +311,27 @@ header{
   width: 90%;
   padding-left: 25px;
   text-align: left;
+}
+.for-scroll{
+  height: 1500px;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 100;
+  background-color: #ddd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+}
+.scroll-top:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 /* posts/detail ================================ */
