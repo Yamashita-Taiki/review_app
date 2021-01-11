@@ -19,6 +19,7 @@ gem 'pry-byebug'
 gem 'rb-readline'
 gem 'image_processing'
 gem 'kaminari'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
