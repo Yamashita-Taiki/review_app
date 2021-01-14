@@ -9,7 +9,11 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <%
+=begin%>
+ <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+<%
+=end%>
   </head>
 
   <body>
@@ -48,6 +52,9 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
+    <div class="for-scroll"></div>
+  
+  <div id="js-scroll-top" class="scroll-top">TOP</div>
     <%= yield %>
 
     <script>
