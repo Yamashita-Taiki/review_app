@@ -15,7 +15,7 @@
 　・本検索機能（楽天API）
 
 3「使用した技術」
-　・フロント周りにHTML/CSS　bootstrap
+　・フロント周りにHTML/CSS JS　bootstrap
   ・サーバサイドにruby on rails
   ・ソース管理はGit
 　・herokuにデプロイ
