@@ -14,28 +14,27 @@
     そこで、参考書を使った独学であればそこまで高価でもなく、塾などでは得られないこともあるので独学を支えていきたいと考えました。<br>
     しかし参考書の数が多すぎるため自分にあった参考書、また他人にオススメできる参考書を投稿できるサービスとして作成しました。
             </p>
-            <input type="button" id="closeBtn" value="閉じる">
+            <input type="button" class="closeBtn" value="閉じる">
         </div>
     </div>
 </div>
   <section class="button">
   <div class="inner">
    <div class="button_item">
-   <p class="button01 btn-p" id="btn">このアプリを作った理由</p>
+   <p class="button01 btn-p btn">このアプリを作った理由</p>
    </div>
   </div>
   </section>
-
 </div>
 
 <script>
-const btn = document.getElementById('btn');
-const modal = document.getElementById('modal');
+const btn = document.querySelector('.btn');
+const modal = document.querySelector('.modal');
 
 btn.addEventListener('click', function() {
   modal.style.display = 'block';
 })
-const closeBtn = document.getElementById('closeBtn');
+const closeBtn = document.querySelector('.closeBtn');
 
 closeBtn.addEventListener('click', function() {
   modal.style.display = 'none';
