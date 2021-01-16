@@ -32,10 +32,21 @@
       <%if @post.user_id == @logined_user.id %>
       <div class="post-menus">
         <%= link_to("編集する", "/posts/#{@post.id}/edit") %>
+
+        <div id='alert_btn'>
         <%= link_to("削除する", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+        </div>
       <% end %>  
       </div>
       </p>
     </div>
   </div>
 </div>
+
+<script>
+const alert_btn = document.querySerector('#alert_btn')
+alert_btn.addEventListner('click', functin(){
+  alert('投稿を削除してよろしいですか？')
+})
+
+</script>

@@ -21,15 +21,15 @@
   <section class="button">
   <div class="inner">
    <div class="button_item">
-   <p class="button01 btn-p btn">このアプリを作った理由</p>
+   <p class="button01 btn-p" id='btn'>このアプリを作った理由</p>
    </div>
   </div>
   </section>
 </div>
 
 <script>
-const btn = document.querySelector('.btn');
-const modal = document.querySelector('.modal');
+const btn = document.querySelector('#btn');
+const modal = document.querySelector('#modal');
 
 btn.addEventListener('click', function() {
   modal.style.display = 'block';
