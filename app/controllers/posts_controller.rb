@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @posts = @posts.page(params[:page]).per(7)
   end
   
-  def detail
+  def show
     @post = Post.find_by(id: params[:id])
     @user = @post.user
  end
