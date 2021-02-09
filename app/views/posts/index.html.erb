@@ -12,7 +12,7 @@
             </div>
          </div>
          <div class='post-title'>
-          タイトル：<%= link_to(post.title, "/posts/#{post.id}") %> 
+          タイトル：<%= link_to(post.title, post_path(post)) %> 
         </div>
           レビュー：<%= link_to(post.content, "/posts/#{post.id}") %>         
         </div>
