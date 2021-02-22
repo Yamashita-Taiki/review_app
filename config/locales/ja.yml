@@ -4,7 +4,7 @@ ja:
       user: ユーザー
     attributes:
       post:
-        content: 本文
+        content: 本の感想
         email: メールアドレス
         picture: 本の写真
         title: 本のタイトル
